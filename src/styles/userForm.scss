@@ -1,0 +1,19 @@
+.user_form {
+  & > form {
+    .inputField {
+      @include inputFields;
+      & > div > input,
+      select {
+        width: 100%;
+      }
+    }
+
+    .submitBtn {
+      text-align: end;
+
+      button {
+        @include generalBtn;
+      }
+    }
+  }
+}

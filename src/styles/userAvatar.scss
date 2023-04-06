@@ -1,0 +1,24 @@
+.user_avatar {
+    margin: 0 0.5rem;
+  
+    img {
+      border: 1px solid rgb(193, 209, 241);
+      box-shadow: 2px 2px 5px 2px rgb(205, 204, 204);
+      cursor: pointer;
+    }
+  
+    & > ul > li > span {
+      transition: 300ms ease-in-out;
+      font-family: secondaryFont;
+      font-size: 1rem;
+    }
+  
+    & > ul > li > span:hover {
+      color: white;
+      background-color: $primaryColor;
+      cursor: pointer;
+      margin: 0 1rem;
+      border-radius: 5px;
+    }
+  }
+  

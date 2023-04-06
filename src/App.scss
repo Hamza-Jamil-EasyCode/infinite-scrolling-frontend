@@ -1,0 +1,60 @@
+$primaryColor: #37358d;
+$secondaryColor: #f2f2f2;
+$tertiaryColor: #ec1d69;
+$fourthColor: #828282;
+$fifthColor: #e1e1eb;
+$sixthColor: #ededf3;
+$black: #333333;
+$seventhColor: #bdbdbd;
+$eightColor: #4f4f4f;
+$ninthColor: #cccccc;
+$green: #219653;
+
+@mixin hoverBtn {
+  margin-right: 1rem;
+  border: 2px solid $primaryColor;
+  background-color: transparent;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 0.3rem 0.8rem;
+  color: $primaryColor;
+  transition: 200ms ease-in-out;
+  font-family: primaryFont;
+
+  &:hover {
+    background-color: $primaryColor;
+    color: white;
+  }
+}
+
+@mixin generalBtn {
+  padding: 0.4rem 1rem;
+  width: fit-content;
+  border-radius: 5px;
+  background-color: $primaryColor;
+  font-family: secondaryFont;
+  outline: none;
+  border: none;
+  color: white;
+}
+
+@mixin inputFields {
+  label {
+    font-size: 1rem;
+    font-family: secondaryFont;
+    color: $primaryColor;
+  }
+
+  input,
+  select,
+  textarea {
+    border: none;
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+    font-family: secondaryFont;
+    background-color: $fifthColor;
+    outline: none;
+  }
+}
+
+@import "styles";

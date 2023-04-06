@@ -1,0 +1,95 @@
+.user_listing {
+  &-addUser {
+    display: flex;
+    justify-content: end;
+
+    button {
+      @include generalBtn;
+    }
+
+    button + button {
+      margin-left: 1rem;
+    }
+  }
+
+  .data {
+    margin: 1rem 0 0;
+    // border: 1px solid $fourthColor;
+    border-radius: 10px;
+    height: 450px;
+    overflow: auto;
+
+    & > table {
+      overflow: auto;
+      width: 100%;
+      position: relative;
+
+      thead {
+        position: sticky;
+        top: 0;
+        background-color: $primaryColor;
+        tr {
+          td {
+            padding: 1rem;
+            white-space: nowrap;
+            width: 100px;
+            font-family: tertiaryFont;
+            color: white;
+
+            &:first-child {
+              width: 50px;
+            }
+
+            &:last-child {
+              width: 100px;
+            }
+          }
+        }
+      }
+
+      tbody {
+        background-color: $ninthColor;
+        tr {
+          td {
+            padding: 1rem;
+            white-space: nowrap;
+            width: 100px;
+            font-family: tertiaryFont;
+
+            &:first-child {
+              color: $tertiaryColor;
+              width: 50px;
+            }
+          }
+
+          .inactive {
+            color: $tertiaryColor;
+          }
+
+          .action {
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+
+            i {
+              transition: 200ms ease-in-out;
+              cursor: pointer;
+            }
+
+            i:hover {
+              color: $tertiaryColor;
+            }
+          }
+        }
+      }
+    }
+
+    .no-load {
+      text-align: center;
+      h1 {
+        color: $tertiaryColor;
+        font-size: 1rem;
+      }
+    }
+  }
+}

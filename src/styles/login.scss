@@ -1,0 +1,149 @@
+.login {
+  min-height: 100vh;
+
+  &-left {
+    background-color: #ededf3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: $tertiaryColor;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      font-family: tertiaryFont;
+    }
+
+    form {
+      .inputField {
+        margin-top: 1.5rem;
+
+        label {
+          font-family: secondaryFont;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1.1rem;
+          line-height: 2.2rem;
+          color: #37358d;
+          position: relative;
+          width: 100%;
+        }
+
+        label + div {
+          display: flex;
+          border: 2px solid #37358d;
+          border-radius: 5px;
+          justify-content: space-between;
+          align-items: center;
+
+          input,
+          select {
+            margin-right: 0.5rem;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            font-family: secondaryFont;
+          }
+
+          i {
+            margin: 0 0.8rem 0 0.5rem;
+            color: #37358d;
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .error {
+        font-family: secondaryFont;
+        color: red;
+        font-size: 0.8rem;
+      }
+
+      .submitBtn {
+        margin-top: 3rem;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: bold;
+        background-color: transparent;
+        border: 2px solid #37358d;
+        color: #37358d;
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          border-radius: 5px;
+          bottom: 0;
+          z-index: -1;
+          background-color: #37358d;
+          transform: scaleX(0);
+          transition: transform 0.4s ease-in-out;
+          font-family: secondaryFont;
+        }
+
+        &:hover::before,
+        &:focus::before {
+          transform: scaleX(1);
+        }
+
+        &:hover,
+        &:focus {
+          color: white;
+        }
+      }
+    }
+
+    .sign-up {
+      text-align: center;
+      a {
+        text-decoration: none;
+        margin: 0 auto;
+        font-family: secondaryFont;
+        color: $primaryColor;
+        transition: 200ms ease-in-out;
+        &:hover {
+          color: $tertiaryColor;
+        }
+      }
+    }
+  }
+
+  &-right {
+    background-color: #37358d;
+    min-height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    img {
+      width: 80%;
+      height: 65vh;
+      object-fit: contain;
+      position: absolute;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      img {
+        width: 60%;
+      }
+    }
+  }
+}

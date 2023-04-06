@@ -1,0 +1,29 @@
+.header_wrapper {
+    &-heading {
+      display: flex;
+      align-items: center;
+      color: $primaryColor;
+  
+      &__icon {
+        border: 2px solid $primaryColor;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+  
+        i {
+          padding: 0.1rem 0.5rem;
+          font-size: 1.3rem;
+        }
+      }
+  
+      .title {
+        font-size: 1.3rem;
+        font-family: primaryFont;
+        margin: 0;
+        padding: 0;
+        padding-left: 0.5rem;
+        font-weight: 600;
+      }
+    }
+  }
+  

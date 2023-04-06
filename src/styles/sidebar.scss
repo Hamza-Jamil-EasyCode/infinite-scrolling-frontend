@@ -1,0 +1,65 @@
+.sidebar {
+
+  &-wrapper {
+    transition: 500ms ease-in-out;
+    background-color: $primaryColor;
+
+    &_logo {
+      margin: 1rem 1rem 0;
+      font-family: tertiaryFont;
+      font-size: 1.2rem !important;
+      color: white;
+      text-decoration: underline; 
+    }
+
+    .nav-item {
+      margin: 0 0 0.6rem;
+      font-family: secondaryFont;
+
+      .nav-link {
+        color: white;
+        z-index: 1;
+        position: relative;
+        white-space: nowrap;
+        padding: 0.5rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .navLinkActive {
+        font-family: secondaryFont;
+        color: $primaryColor;
+        background-color: $secondaryColor;
+      }
+
+      .nav-link::before {
+        content: "";
+        background-color: $secondaryColor;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 5px;
+        z-index: -1;
+        transform-origin: top;
+        transition: 300ms ease-in-out;
+        transform: scale(0);
+      }
+
+      .nav-link:hover::before {
+        transform: scale(1);
+      }
+
+      .nav-link:hover {
+        color: $primaryColor;
+        // transform: scale(1);
+      }
+    }
+    .username {
+      // border: 1px solid red;
+      text-align: center;
+      font-family: secondaryFont;
+    }
+  }
+}
